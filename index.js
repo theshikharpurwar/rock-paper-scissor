@@ -102,10 +102,32 @@ function autoplay(){
   }
   const autoPlayB = document.querySelector('.js-auto-play-button');
   if (autoPlayB.innerText === 'Auto Play'){
-    autoPlayB.innerHTML = "Stop"
+    autoPlayB.innerHTML = "Stop Playing"
   } else{
     autoPlayB.innerHTML ="Auto Play";
   }
+}
+
+function confirmationMessage() {
+  const confirm = document.querySelector('.js-confirmation');
+  confirm.innerHTML = `
+    Are you sure you want to reset the score? 
+    <button class="confirmation-button js-yes-button">Yes</button>
+    <button class="confirmation-button js-no-button">No</button>
+    `;
+  document.querySelector('.js-yes-button')
+    .addEventListener('click', () => {
+        score.wins = 0;
+        score.losses = 0;
+        score.ties = 0;
+        localStorage.removeItem('score');
+        updateScoreElement();
+        confirm.innerHTML = '';
+  })
+  document.querySelector('.js-no-button')
+    .addEventListener('click', () => { 
+      confirm.innerHTML = '';
+    })
 }
 
 document.querySelector('.js-rock-button')
@@ -125,11 +147,7 @@ document.querySelector('.js-scissor-button')
 
 document.querySelector('.js-reset-button')
   .addEventListener('click', () => {
-      score.wins = 0;
-      score.losses = 0;
-      score.ties = 0;
-      localStorage.removeItem('score');
-      updateScoreElement();
+      confirmationMessage();
   })
 
 document.querySelector('.js-auto-play-button')
@@ -146,5 +164,8 @@ document.body.addEventListener('keydown', (event) => {
   }
   else if (event.key === 's'){
     playGame('scissors');
+  }
+  else if(event.key === 'a'){
+    autoplay();
   }
 })

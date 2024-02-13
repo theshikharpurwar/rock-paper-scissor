@@ -34,3 +34,18 @@ body {
     padding: 8px 15px;
     cursor: pointer;
 }
+
+.auto-play-button{
+    margin-left: 10px;
+}
+
+.confirmation-box{
+    margin-top: 18px;
+}
+
+.confirmation-button{
+    padding: 6px 18px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: 10px;
+}
