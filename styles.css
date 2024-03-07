@@ -10,8 +10,9 @@ body {
 
 .main {
     background-color: #333333;
-    padding: 20px;
+    padding: 50px;
     text-align: center;
+    border: 1px solid #ffffff;
 }
 
 .title {
@@ -51,14 +52,18 @@ body {
     font-size: 15px;
     padding: 8px 15px;
     cursor: pointer;
+    border-radius: 50px;
 }
 
 .auto-play-button {
     margin-left: 10px;
 }
 
-.confirmation-box {
-    margin-top: 18px;
+.border-conformation{
+    border: 1px solid #ffffff;
+    padding: 15px;
+    border-radius: 50px;
+    margin-top: 50px;
 }
 
 .confirmation-button {
@@ -66,4 +71,43 @@ body {
     font-size: 15px;
     cursor: pointer;
     margin-left: 10px;
+    border-radius: 50px;
 }
+
+.move-button {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .move-button:hover {
+    transform: scale(1.1);
+  }
+
+  .move-button:active {
+    transform: scale(0.9);
+  }
+
+  .js-result {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+
+  .js-moves {
+    margin-top: 20px;
+  }
+
+  .js-score {
+    margin-top: 20px;
+  }
+
+  .reset-score-button {
+    margin-top: 10px;
+  }
+
+  .js-auto-play-button {
+    margin-top: 20px;
+  }
+
+  .js-confirmation {
+    margin-top: 20px;
+  }

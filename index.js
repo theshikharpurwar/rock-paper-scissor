@@ -110,10 +110,11 @@ function autoplay(){
 
 function confirmationMessage() {
   const confirm = document.querySelector('.js-confirmation');
-  confirm.innerHTML = `
-    Are you sure you want to reset the score? 
-    <button class="confirmation-button js-yes-button">Yes</button>
-    <button class="confirmation-button js-no-button">No</button>
+  confirm.innerHTML = `<div class="border-conformation">
+  Are you sure you want to reset the score? 
+  <button class="confirmation-button js-yes-button">Yes</button>
+  <button class="confirmation-button js-no-button">No</button>
+  </div>
     `;
   document.querySelector('.js-yes-button')
     .addEventListener('click', () => {
