@@ -4,16 +4,15 @@ https://theshikharpurwar.github.io/rock-paper-scissor/
 
 
 
-This JavaScript file is the core of a simple Rock, Paper, Scissors game. Here's a brief overview of how it works:
+This JavaScript file forms the foundation of a basic Rock, Paper, Scissors game. Here's a quick rundown of its operation:
 
-1. **Score Keeping**: The game keeps track of the number of wins, losses, and ties. The score is stored in the local storage of the browser, allowing the score to persist across multiple sessions.
+Score Tracking: The game records the count of victories, defeats, and draws. The score is saved in the browser's local storage, enabling it to be maintained over several sessions.
 
-2. **Gameplay**: The `playGame` function is the main function that handles the game logic. It takes in a player's move (rock, paper, or scissors) and compares it to the computer's move, which is determined by the `pickComputerMove` function (not shown in the provided code). The game follows the standard rules of Rock, Paper, Scissors:
+Game Mechanics: The playGame function is the primary function that manages the game rules. It accepts a player's choice (rock, paper, or scissors) and contrasts it with the computer's choice, which is chosen by the pickComputerMove function (not included in the provided code). The game adheres to the conventional Rock, Paper, Scissors rules:
 
-    - Rock beats Scissors
-    - Scissors beat Paper
-    - Paper beats Rock
+Rock overcomes Scissors
+Scissors cut Paper
+Paper covers Rock
+Outcomes: The outcome of each round (win, loss, or draw) is decided based on the player's choice and the computer's choice. The outcome is then saved in the result variable.
 
-3. **Results**: The result of each game (win, loss, or tie) is determined based on the player's move and the computer's move. The result is then stored in the `result` variable.
-
-Please note that the `updateScoreElement` and `pickComputerMove` functions are not shown in the provided code. The `updateScoreElement` function is presumably responsible for updating the user interface with the current score, and the `pickComputerMove` function is presumably responsible for determining the computer's move.
+Please be aware that the updateScoreElement and pickComputerMove functions are not included in the provided code. The updateScoreElement function is likely in charge of refreshing the user interface with the current score, and the pickComputerMove function is likely in charge of selecting the computer's move
